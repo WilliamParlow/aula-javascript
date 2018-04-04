@@ -1,0 +1,165 @@
+* {
+  font-family: Lucida sans unicode regular;
+}
+
+html, body, main {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+main {
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .8em;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+thead tr {
+  cursor: default;
+}
+
+thead tr th {
+  padding: 20px 0 20px 0;
+}
+
+tbody tr:hover {
+  cursor: pointer;
+  background-color: #CCC;
+}
+
+
+table tbody td {
+  padding: 8px 0;
+}
+
+fieldset {
+  border: none;
+  width: 50%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  float: right;
+}
+
+.header {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: #222;
+  color: #DDD;
+  margin: 0 0 2em 0;
+}
+
+.erro {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.ok {
+  background-color: #FFF;
+}
+
+.erro, .ok {
+  border: 1px solid rgba(0, 0, 0, .3);
+  padding: 4px;
+  margin-right: 2px;
+  width: auto;
+  display: block;
+  float: left;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.title {
+  font-size: 1.3em;
+}
+
+.page-header {
+  width: 60%;
+}
+
+.body-container {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.page-body {
+  width: 60%;
+}
+
+.paciente-invalido {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.campo {
+  border-radius: 4px;
+  padding: 4px;
+  border: 1px solid rgba(200, 200, 200, 0.3);
+  background-color: rgba(230, 230, 230, 0.1);
+}
+
+.form {
+  margin: 20px 0 20px 0;
+}
+
+.adicionar {
+  margin: 8px 4px;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.adicionar:hover {
+  background-color: #CCC;
+}
+
+.form-container {
+  padding: 10px;
+}
+
+.erro-msg {
+  color: #D00;
+  display: block;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.ferramentas-tabela {
+  width: 100%;
+  overflow: auto;
+}
+
+.procura {
+  float: right;
+  display: inline;
+}
+
+.legenda {
+  display: inline;
+  float: left;
+}
+
+.filtro {
+  padding: 6px
+}
+
+.invisivel {
+  display: none;
+}
