@@ -11,12 +11,17 @@ document.querySelector('#formaAdiciona')
       // Objeto que vai obter todos os estados de validação de cada input 
       let dadosValidos = {};
 
+      /* Atribui o resultado da validação (Verdadeiro ou falso) para os 
+         atributos do objeto dadosValidos */
       dadosValidos.marca = validador.validaMarca(elementosFormulario.marca);
       dadosValidos.modelo = validador.validaModelo(elementosFormulario.modelo);
       dadosValidos.ano = validador.validaAno(elementosFormulario.ano);
       dadosValidos.cor = validador.validaCor(elementosFormulario.cor);
 
-      if (!dadosValidos.marca || !dadosValidos.modelo || !dadosValidos.ano || !dadosValidos.cor) {
+      /* Verifica se pelo menos um dos campos está inválido. Caso esteja,
+         não será inserido o veículo na tabela */
+      if (!dadosValidos.marca || !dadosValidos.modelo ||
+            !dadosValidos.ano || !dadosValidos.cor) {
          return;
       }
 
@@ -101,7 +106,7 @@ function limparFormulario() {
    let formulario = document.querySelector('#formaAdiciona');
 
    console.log(formulario);
-   
+
    formulario.marca.value = '';
    formulario.modelo.value = '';
    formulario.ano.value = '';
