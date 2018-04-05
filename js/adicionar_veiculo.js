@@ -1,21 +1,38 @@
 // Recebe a referência do formulário e adiona o evento de submissão
 document.querySelector('#formaAdiciona')
-   .addEventListener('submit', function(event) {
+   .addEventListener('submit', function (event) {
 
-   event.preventDefault();
+      // Remove o evento padrão de submissão da página (Reload da página)
+      event.preventDefault();
 
-   adicionarVeiculo();
+      // Recebe um objeto com todos os dados do formulário - marca, modelo, ano e cor
+      let elementosFormulario = getElementosDoFormulario();
 
-});
+      // Objeto que vai obter todos os estados de validação de cada input 
+      let dadosValidos = {};
+
+      dadosValidos.marca = validador.validaMarca(elementosFormulario.marca);
+      dadosValidos.modelo = validador.validaModelo(elementosFormulario.modelo);
+      dadosValidos.ano = validador.validaAno(elementosFormulario.ano);
+      dadosValidos.cor = validador.validaCor(elementosFormulario.cor);
+
+      if (!dadosValidos.marca || !dadosValidos.modelo || !dadosValidos.ano || !dadosValidos.cor) {
+         return;
+      }
+
+      // Chama função que adiciona os dados do novo veículo na tabela
+      adicionarVeiculo(elementosFormulario);
+
+      // limpa os dados do formulário
+      limparFormulario();
+
+   });
 
 // Função para adicionar um novo veículo na tabela
-function adicionarVeiculo() {
+function adicionarVeiculo(elementosFormulario) {
 
    // Recebe a referência para a tabela
    let corpoTabela = document.querySelector('#tabelaVeiculos > tbody');
-
-   // Recebe um objeto com todos os dados do formulário - marca, modelo, ano e cor
-   let elementosFormulario = getElementosDoFormulario();
 
    /* Cria um novo elemento HTML - Uma linha de uma tabela - Aqui colocaremos
       as nossas td`s (Colunas da linha da tabela) */
@@ -34,22 +51,20 @@ function getElementosDoFormulario() {
       dos inputs */
    let formulario = document.querySelector('#formaAdiciona');
 
-   /** Podemos obter todos os elementos inputs utilizando o método elements 
-    *   de um objeto do tipo HTMLFormElement
+   /** Podemos obter todos os elementos inputs diretamente pelo objeto  
+    *   do tipo HTMLFormElement
     * 
-    *   - Para acessar um elemento input com o método elements, utilizamos a 
-    *   seguinte sintaxe
-    *      + objetoFormulario.elements.<NOME/ID_do_campo_input>
+    *   - Para acessar um elemento input, utilizamos a seguinte sintaxe
+    *      + objetoFormulario.<NOME/ID_do_campo_input>
     *
-    *   - Para acessar o valor de um elemento input com o método elements, 
-    *   utilizamos a seguinte sintaxe
-    *      + objetoFormulario.elements.<NOME/ID_do_campo_input>.value
-   */
+    *   - Para acessar o valor de um elemento input, utilizamos a seguinte sintaxe
+    *      + objetoFormulario.<NOME/ID_do_campo_input>.value
+    */
    return {
-      marca: formulario.elements.marca.value,
-      modelo: formulario.elements.modelo.value,
-      ano: formulario.elements.ano.value,
-      cor: formulario.elements.cor.value
+      marca: formulario.marca.value,
+      modelo: formulario.modelo.value,
+      ano: formulario.ano.value,
+      cor: formulario.cor.value
    };
 
 }
@@ -67,7 +82,7 @@ function getElementosDoFormulario() {
  *       + let string = `Eu tenho ${animais.length} animais de estimação`
  *       + let string = `A média de todos os alunos é ${obterMedia()}`
  * 
-*/
+ */
 function getTemplateDaLinhaDaTabela(elementosFormulario) {
 
    return `
@@ -78,5 +93,18 @@ function getTemplateDaLinhaDaTabela(elementosFormulario) {
       <td>${elementosFormulario.cor}</td>
 
    `;
+
+}
+
+function limparFormulario() {
+
+   let formulario = document.querySelector('#formaAdiciona');
+
+   console.log(formulario);
+   
+   formulario.marca.value = '';
+   formulario.modelo.value = '';
+   formulario.ano.value = '';
+   formulario.cor.value = '';
 
 }
