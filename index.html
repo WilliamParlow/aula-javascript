@@ -36,7 +36,7 @@
           </div>
         </div>
 
-        <table class="table">
+        <table id="tabelaVeiculos" class="table">
           <thead>
             <tr >
               <th>Marca</th>
@@ -45,43 +45,43 @@
               <th>Cor</th>
             </tr>
           </thead>
-          <tbody id="tabela-veiculos">
-            <tr class="veiculo">
-              <td class="info-marca">Mercedes</td>
-              <td class="info-modelo">SLC</td>
-              <td class="info-ano">2017</td>
-              <td class="info-cor">Preto</td>
+          <tbody>
+            <tr>
+              <td>Mercedes</td>
+              <td>SLC</td>
+              <td>2017</td>
+              <td>Preto</td>
             </tr>
-            <tr class="veiculo">
-              <td class="info-marca">Ford</td>
-              <td class="info-modelo">FUSION</td>
-              <td class="info-ano">2017</td>
-              <td class="info-cor">Prata</td>
+            <tr>
+              <td>Ford</td>
+              <td>FUSION</td>
+              <td>2017</td>
+              <td>Prata</td>
             </tr>
-            <tr class="veiculo">
-              <td class="info-marca">Nissan</td>
-              <td class="info-modelo">GT-R</td>
-              <td class="info-ano">2018</td>
-              <td class="info-cor">Laranja</td>
+            <tr>
+              <td>Nissan</td>
+              <td>GT-R</td>
+              <td>2018</td>
+              <td>Laranja</td>
             </tr>
-            <tr class="veiculo">
-              <td class="info-marca">Volkswagen</td>
-              <td class="info-modelo">GOL</td>
-              <td class="info-ano">2015</td>
-              <td class="info-cor">Branco</td>
+            <tr>
+              <td>Volkswagen</td>
+              <td>GOL</td>
+              <td>2015</td>
+              <td>Branco</td>
             </tr>
-            <tr class="veiculo">
-              <td class="info-marca">BMW</td>
-              <td class="info-modelo">320I</td>
-              <td class="info-ano">2017</td>
-              <td class="info-cor">Preto</td>
+            <tr>
+              <td>BMW</td>
+              <td>320I</td>
+              <td>2017</td>
+              <td>Preto</td>
             </tr>
           </tbody>
         </table>
 
-        <button id="buscarVeiculo" class="adicionar" type="submit" name="button">buscar veículos</button>
+        <!-- <button id="buscarVeiculo" class="adicionar" type="submit" name="button">buscar veículos</button> -->
 
-        <form id="forma-adiciona" class="form">
+        <form id="formaAdiciona" class="form">
 
           <header>
             <h1>Adicionar novo veículo</h1>
@@ -89,7 +89,7 @@
 
           <fieldset class="">
             <div class="form-container">
-              <span id="erro-marca" class="erro-msg"></span>
+              <span id="erroMarca" class="erro-msg"></span>
               <label for="marca">Marca:</label>
               <input id="marca" type="text" name="marca" class="campo"
               placeholder="Digite a marca do veículo">
@@ -97,7 +97,7 @@
           </fieldset>
           <fieldset class="">
             <div class="form-container">
-              <span id="erro-modelo" class="erro-msg"></span>
+              <span id="erroModelo" class="erro-msg"></span>
               <label for="modelo">Modelo:</label>
               <input id="modelo" type="text" name="modelo" class="campo"
               placeholder="Digite o modelo do veículo">
@@ -105,15 +105,15 @@
           </fieldset>
           <fieldset class="">
             <div class="form-container">
-              <span id="erro-ano" class="erro-msg"></span>
+              <span id="erroAno" class="erro-msg"></span>
               <label for="ano">Ano:</label>
-              <input id="ano" type="text" name="ano" class="campo"
+              <input id="ano" type="number" name="ano" class="campo"
               placeholder="Digite a ano do veículo">
             </fieldset>
           </div>
           <fieldset class="">
             <div class="form-container">
-              <span id="erro-cor" class="erro-msg"></span>
+              <span id="erroCor" class="erro-msg"></span>
               <label for="cor">Cor:</label>
               <input id="cor" type="text" name="cor" class="campo"
               placeholder="Digite a cor do veículo">
@@ -126,7 +126,7 @@
     </section>
   </main>
 
-  
+  <script src="./js/adicionar_veiculo.js"></script>
 
 </body>
 </html>
