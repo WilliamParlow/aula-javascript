@@ -1,3 +1,13 @@
+// Recebe a referência do formulário e adiona o evento de submissão
+document.querySelector('#formaAdiciona')
+   .addEventListener('submit', function(event) {
+
+   event.preventDefault();
+
+   adicionarVeiculo();
+
+});
+
 // Função para adicionar um novo veículo na tabela
 function adicionarVeiculo() {
 
