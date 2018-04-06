@@ -1,3 +1,6 @@
+// Recebe a referência para a tabela
+let corpoTabela = document.querySelector('#tabelaVeiculos > tbody');
+
 // Recebe a referência do formulário e adiona o evento de submissão
 document.querySelector('#formaAdiciona')
    .addEventListener('submit', function (event) {
@@ -35,9 +38,6 @@ document.querySelector('#formaAdiciona')
 
 // Função para adicionar um novo veículo na tabela
 function adicionarVeiculo(elementosFormulario) {
-
-   // Recebe a referência para a tabela
-   let corpoTabela = document.querySelector('#tabelaVeiculos > tbody');
 
    /* Cria um novo elemento HTML - Uma linha de uma tabela - Aqui colocaremos
       as nossas td`s (Colunas da linha da tabela) */
@@ -101,12 +101,13 @@ function getTemplateDaLinhaDaTabela(elementosFormulario) {
 
 }
 
+// Limpa os campos input do formulário
 function limparFormulario() {
 
+   // Recebe a referência do formulário da página
    let formulario = document.querySelector('#formaAdiciona');
 
-   console.log(formulario);
-
+   // Define os valores de todos os camos como vazios
    formulario.marca.value = '';
    formulario.modelo.value = '';
    formulario.ano.value = '';
