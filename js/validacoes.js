@@ -8,7 +8,7 @@ let validador = {
    erroAno: document.querySelector('#erroAno'),
    erroCor: document.querySelector('#erroCor'),
 
-   validaMarca: function(marca) {
+   validaMarca: function (marca) {
 
       if (marca.length == 0) {
          this.erroMarca.innerHTML = 'O campo marca não pode estar em branco';
@@ -16,11 +16,11 @@ let validador = {
       }
 
       this.erroMarca.innerHTML = '';
-      
+
       return true;
    },
 
-   validaModelo: function(modelo) {
+   validaModelo: function (modelo) {
 
       if (modelo.length == 0) {
          this.erroModelo.innerHTML = 'O campo modelo não pode estar em branco';
@@ -32,7 +32,7 @@ let validador = {
       return true;
    },
 
-   validaAno: function(ano) {
+   validaAno: function (ano) {
 
       if (ano < 1950) {
          this.erroAno.innerHTML = 'O campo ano deve ser maior que 1949';
@@ -40,11 +40,11 @@ let validador = {
       }
 
       this.erroAno.innerHTML = '';
-      
+
       return true;
    },
 
-   validaCor: function(cor) {
+   validaCor: function (cor) {
 
       if (cor.length == 0) {
          this.erroCor.innerHTML = 'O campo cor não pode estar em branco';
@@ -52,7 +52,7 @@ let validador = {
       }
 
       this.erroCor.innerHTML = '';
-      
+
       return true;
    }
 

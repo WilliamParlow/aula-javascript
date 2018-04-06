@@ -21,7 +21,7 @@ document.querySelector('#formaAdiciona')
       /* Verifica se pelo menos um dos campos está inválido. Caso esteja,
          não será inserido o veículo na tabela */
       if (!dadosValidos.marca || !dadosValidos.modelo ||
-            !dadosValidos.ano || !dadosValidos.cor) {
+         !dadosValidos.ano || !dadosValidos.cor) {
          return;
       }
 
