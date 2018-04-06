@@ -1,0 +1,44 @@
+[
+   {
+      "marca": "FIAT",
+      "modelo": "UNO",
+      "ano": 2003,
+      "cor": "Branco"
+   },
+   {
+      "marca": "GENERAL MOTORS",
+      "modelo": "Celta",
+      "ano": 2010,
+      "cor": "Roxo"
+   },
+   {
+      "marca": "RENAULT",
+      "modelo": "CLIO",
+      "ano": 2007,
+      "cor": "Verde"
+   },
+   {
+      "marca": "KIA",
+      "modelo": "CERATO",
+      "ano": 2017,
+      "cor": "Preto"
+   },
+   {
+      "marca": "LAND ROVER",
+      "modelo": "RANGE ROVER",
+      "ano": 2019,
+      "cor": "Azul"
+   },
+   {
+      "marca": "FORD",
+      "modelo": "MUSTANG",
+      "ano": 2019,
+      "cor": "Laranja"
+   },
+   {
+      "marca": "GENERAL MOTORS",
+      "modelo": "CORVETTE",
+      "ano": 2019,
+      "cor": "Grafite"
+   }
+]
