@@ -36,7 +36,7 @@ botaoBusca.addEventListener('click', function () {
          
          // Percorre todos os veículos da lista e adiciona um por um na tabela
          for (let i = 0; i < listaVeiculos.length; i++) {
-            adicionarVeiculosAjax(listaVeiculos[i]);
+            adicionarVeiculo(listaVeiculos[i]);
          }
 
       }
@@ -53,16 +53,3 @@ botaoBusca.addEventListener('click', function () {
    ajax.send();
 
 });
-
-// Adiciona uma nova linha na tabela
-function adicionarVeiculosAjax(veiculo) {
-
-   // Cria uma nova linha de tabela
-   let tr = document.createElement('tr');
-   // Adicionamos as células da tabela na linha de tabela criada
-   tr.innerHTML = getTemplateDaLinhaDaTabela(veiculo);
-
-   // Adicionamos a linha no corpo da tabela
-   corpoTabela.appendChild(tr);
-
-}
